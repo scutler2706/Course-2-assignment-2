@@ -1,0 +1,60 @@
+---
+title: "FarsFunctions: How to use Guide"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, warning=FALSE}
+library(farsFunctions) 
+
+```
+
+## Introduction
+
+<strong> Read through each of the functions documentation to see how they work </strong>
+
+<p> The functions in this package are designed to help extract FARS data to produce a visual plot with a state map including the accidents location by year </p>
+
+### List of Functions:
+
+#### 1) fars_read 
+
+This function reads data from .csv file, stored on disk, from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (FARS), which is a nationwide census, providing the American public yearly data, regarding fatal injuries suffered in motor vehicle traffic crashes.
+
+``` {r}
+fars_read("/Users/Sam/Documents/R/Course 2 Package Dev/data/accident_2013.csv.bz2")
+```
+
+#### 2) make_filename
+
+Make .csv data file name related to the given year The function does not check if the file is available.
+
+``` {r}
+make_filename(2013)
+```
+
+#### 3) fars_read_years
+
+Ancillary function used by fars_summarize_years
+
+``` {r}
+fars_read_years(2013)
+```
+
+#### 4) fars_summarize_years
+
+This function summarizes yearly accidents data, by month
+
+#### 5) fars_map_state
+
+Displays a plot with a state map including the accidents location by year If the state.num is invalid the function shows an error.

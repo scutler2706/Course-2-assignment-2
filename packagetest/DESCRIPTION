@@ -1,0 +1,19 @@
+Package: farsFunctions
+Title: Functions for Fars Data
+Version: 0.0.0.9000
+Authors@R: 
+    person("Sam", "Cutler", email = "sam@bayezian.com", role = c("aut", "cre"))
+Description: farsFunctions assignment package to test knowledge of R package development. 
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: 
+    dplyr,
+    maps,
+    tidyr,
+    readr
